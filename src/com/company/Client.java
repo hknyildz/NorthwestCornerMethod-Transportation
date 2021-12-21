@@ -1,12 +1,13 @@
 package com.company;
 
 public class Client {
-    int result = 0;
+
     int startindex = 0;
     int startcolumn = 0;
 
     public int count(int[][] table, int startrow, int startcolumn) {
-        if (table[startcolumn][table[startcolumn].length - 1] - table[table.length - 1][startrow] > 0) {
+        int result = 0;
+        if ((table[startcolumn][table[startcolumn].length - 1] - table[table.length - 1][startrow] > 0)) {
             table[startcolumn][table[startcolumn].length - 1] = (table[startcolumn][table[startcolumn].length - 1] - table[table.length - 1][startcolumn]);
             result += table[startcolumn][startrow] * table[table.length - 1][startrow];
             startrow++;
@@ -29,4 +30,4 @@ public class Client {
     }
 
 }
-//2430 1380 450  1200 700 3420
+//2430 1380 450  1200 700 3249
